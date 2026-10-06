@@ -285,9 +285,15 @@ ORDER BY country, rank_in_country;
    - *Action:* Partner with a bonded third-party logistics (3PL) facility in the Netherlands or Germany to offer domestic European shipping rates and Euro-denominated checkout, unlocking higher order velocity across continental Europe.
 
 ## 10. Limitations
-- [Limitation 1]
-- [Limitation 2]
+- **Premature Window Truncation (December 2011):** The dataset terminates on December 9, 2011 at 12:50:00. This captures only 9 full operating days, creating an artificial -57.68% MoM drop that distorts full-year seasonality unless normalized on a daily run-rate basis.
+- **Unattributed Customer Checkouts (~25% Missing ID):** Exactly 135,080 transactions (24.93% of all rows) lack a `CustomerID`. While fully captured in storewide financial and product counts, these unassigned transactions cannot be attributed to customer lifetime value or RFM segment dynamics.
+- **Absence of Unit Cost & Margin Metrics:** The ledger provides selling price (`UnitPrice`) but omits Cost of Goods Sold (COGS), warehouse handling, outbound shipping fees, and return processing expenses. Consequently, findings reflect top-line revenue rather than net operating profit margin.
+- **Dataset-Specific RFM Quintile Calibration:** RFM segment boundaries were generated via internal sample quintiles. While effective for relative cohort comparisons within this catalog, the scoring boundaries are empirical and should be recalibrated before deployment in other e-commerce retail sectors.
+- **Ambiguous Negative Quantity Transactions:** While 9,288 records are confirmed order cancellations (Invoice prefix `'C'`), an additional 1,336 negative quantity line items lacked formal cancellation tags, representing unlinked inventory write-offs, warehouse damages, or manual administrative balancing.
 
 ## 11. Future Improvements
-- [Suggestion 1]
-- [Suggestion 2]
+- **Probabilistic CLV & Churn Forecasting (BG/NBD Modeling):** Implement Pareto/NBD or BG/NBD models alongside Gamma-Gamma spend distributions to predict individual customer retention probabilities and expected monetary value over a forward 12-month window.
+- **Association Rule Mining (Market Basket Recommendations):** Apply Apriori or FP-Growth algorithms to discover SKU co-occurrence patterns, identifying natural product bundles (e.g., tea sets and cake stands) to increase units per transaction (UPT).
+- **Interactive Executive Analytics Dashboard:** Build an interactive Streamlit or Dash web application connected to PostgreSQL, featuring real-time KPI scorecards, cohort retention heatmaps, and customizable date-range slicing.
+- **Customer Identity Resolution & Enrichment:** Implement probabilistic customer matching on guest checkouts (using shipping address or card tokens if available) and merge with external geographic classification to segment retail vs. trade accounts.
+- **Production Data Pipeline & Schema Validation:** Modernize the batch extraction into an automated dbt/Airflow pipeline utilizing Great Expectations suites to systematically flag anomalous negative prices, missing descriptions, and unmapped stock codes prior to downstream reporting.
