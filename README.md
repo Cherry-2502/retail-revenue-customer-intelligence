@@ -251,8 +251,8 @@ FROM monthly_rev;
 
 ### 1. Clone Repository & Setup Environment
 ```bash
-git clone https://github.com/yourusername/ecommerce-sales-analytics.git
-cd ecommerce-sales-analytics
+git clone https://github.com/Cherry-2502/retail-revenue-customer-intelligence.git
+cd retail-revenue-customer-intelligence
 
 # Create virtual environment
 python -m venv venv
@@ -297,5 +297,5 @@ psql -U postgres -d ecommerce_db -f sql/03_advanced_analysis.sql
 ## Author & Contact
 
 - **Author:** Gopi
-- **Project Repository:** [ecommerce-sales-analytics](https://github.com/yourusername/ecommerce-sales-analytics)
+- **Project Repository:** [ecommerce-sales-analytics](https://github.com/Cherry-2502/retail-revenue-customer-intelligence)
 - **License:** [MIT License](LICENSE)
