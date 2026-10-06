@@ -1,7 +1,7 @@
 # E-Commerce Sales & Customer Analytics
 
 ## 1. Executive Summary
-*(written LAST – 2–3 sentences that summarize the whole story)*
+This end-to-end commercial analytics investigation of 541,909 UK-based e-commerce transactions (£10.64M gross / £9.75M net revenue across Dec 2010–Dec 2011) uncovers pronounced fourth-quarter holiday seasonality peaking in November at £1.51M gross (+104.8% over August) alongside severe customer spend concentration, where the top 10% of accounts drive 60.05% of identified customer spend. Proprietary RFM segmentation establishes that an elite "Champions" tier (22.05% of accounts) commands 67.72% of customer revenue (£5.62M), while 689 "At Risk" accounts represent £756k in critical win-back potential and the enterprise remains 84.00% reliant on the UK domestic market. Strategic business recommendations focus on formalizing a dedicated B2B Key Account desk for the top 5% of spenders, launching automated win-back workflows and first-to-second purchase conversion drip funnels, advancing inventory procurement to July/August, and establishing a Western European 3PL hub in the Netherlands or Germany to eliminate cross-border postage friction.
 
 ## 2. Dataset
 - **Source:** UCI Machine Learning Repository — Online Retail Dataset (Dataset ID 352).
