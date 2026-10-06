@@ -1,6 +1,27 @@
+# Virtual environments
+venv/
 ecommerce/
+ENV/
+env/
+
+# Python bytecode & caches
 __pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.log
+
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+# Operating system artifacts
 .DS_Store
+Thumbs.db
+
+# Raw data (23MB .xlsx excluded from git tracking)
 data/raw/
+
+# Scratch & temporary files
 Rough_work.txt
+scratch/
+*.tmp
